@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+table {
+  margin: auto;
+  margin-top: 50px;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+}
+tr,
+th,
+td {
+  padding: 10px;
+  border: 1px solid rgb(175, 173, 173);
+  text-align: center;
+}
+.button {
+  background-color: crimson;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 50px;
+  cursor: pointer;
+  color: white;
+}
+.button:hover{
+  background-color: dodgerblue;
+}
+th,
+td {
+  width: 150px;
+}
+.uploadBtn {
+  width: 80px;
+  height: 30px;
+  background-color: rgb(109, 110, 4);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.uploadBtn:hover {
+  background-color: dodgerblue;
+}
