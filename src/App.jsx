@@ -14,6 +14,7 @@ function App() {
 
   const reduxData = useSelector((state) => state.data.data);
 
+
   // console.log(tableData);
 
   const fileTypecheck = (str) => {
@@ -87,7 +88,7 @@ function App() {
             let obj = {};
             obj["id"] = id;
             ele.map((td) => {
-              obj[`td${count}`] = td;
+              obj[`td${count}`] = <td>{td}</td>;
               if (count > ele.length - 1) {
                 count = 0;
               }
@@ -138,12 +139,15 @@ function App() {
       />
       <br></br>
       <br></br>
-      <button onClick={handleFileUpload} className="uploadBtn">UPLOAD</button>
+      <button onClick={handleFileUpload} className="uploadBtn">
+        UPLOAD
+      </button>
       <table border="1">
         {reduxData.map((item, index) => {
           return (
             <tr key={index}>
-              {index === 0 && (
+              {Object.values(item)}
+              {/* {index === 0 && (
                 <>
                   {" "}
                   <th>{item.td1}</th> <th>{item.td2}</th>{" "}
@@ -174,8 +178,15 @@ function App() {
                   <td>
                     {isEdit ? (
                       <>
-                        <button onClick={handleCancel} className="button">Cancel</button>{" "}
-                        <button onClick={() => handleSave(index)} className="button">Save</button>
+                        <button onClick={handleCancel} className="button">
+                          Cancel
+                        </button>{" "}
+                        <button
+                          onClick={() => handleSave(index)}
+                          className="button"
+                        >
+                          Save
+                        </button>
                       </>
                     ) : (
                       <button
@@ -187,7 +198,7 @@ function App() {
                     )}
                   </td>
                 </>
-              )}
+              )} */}
             </tr>
           );
         })}
